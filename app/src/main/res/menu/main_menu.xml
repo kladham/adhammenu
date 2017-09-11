@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/mnitmscreen1"android:title="screen1"/>
+    <item android:id="@+id/mnitmscreen2" android:orderInCategory="100"android:title="screen2"/>
+    <item android:id="@+id/mnitmscreen3" android:title="screen3"/>
+    <item android:id="@+id/mnitmscreen4" android:title="screen4"/>
+    
+
+
+
+</menu>
