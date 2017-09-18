@@ -5,14 +5,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.Calendar;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
+
+{
+    private Button btndate;
+    private TextView tvshowdate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btndate= (Button) findViewById(R.id.btndate);
+        tvshowdate= (TextView) findViewById(R.id.tvshowdate);
+        btndate.setOnClickListener(this);
+
     }
 
     @Override
@@ -47,6 +61,18 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+
+        if (v=btndate)
+        {
+            Calendar c= Calendar.getInstance();
+        }
+
+
     }
 }
 

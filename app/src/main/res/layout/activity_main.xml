@@ -7,10 +7,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.klaib.adham.menu.MainActivity">
+    tools:context="com.klaib.adham.menu.MainActivity"
+    android:id="@+id/tvshowdate">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello World!"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:id="@+id/btndate"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#db5e5e" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/btndate"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="right|top" />
 </RelativeLayout>
