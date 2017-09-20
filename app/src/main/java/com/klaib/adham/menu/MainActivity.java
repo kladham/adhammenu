@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view)
     {
-        if (view=btndate)
+        if (view==btndate)
         {
             //to get current date
             Calendar c= Calendar.getInstance();
@@ -74,11 +74,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             DatePickerDialog.OnDateSetListener dateListner=new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    tvshowdate.setText(dayOfMonth+"/"+month+"/"+year+);
+                    tvshowdate.setText(dayOfMonth+"/"+month+"/"+year);
 
                 }
             };
             DatePickerDialog datePickerDialog=new DatePickerDialog(this,dateListner,year,month,day);
+
+
+
 
 
 
