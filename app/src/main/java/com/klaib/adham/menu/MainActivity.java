@@ -14,16 +14,16 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Objects;
-public class MainActivity extends AppCompatActivity implements View.OnClickListener,TimePickerDialog.OnTimeSetListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btndate;
     private TextView tvshowdate;
     private Object calendar;
     private Button btnbutton2;
     private TextView tvshowtime;
     private int timeListner;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btndate = (Button) findViewById(R.id.btndate);
@@ -32,15 +32,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnbutton2 = (Button) findViewById(R.id.btnbutton2);
         tvshowtime = (TextView) findViewById(R.id.tvshowtime);
     }
-
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
-
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         switch (item.getItemId()) {
             case R.id.mnitmscreen1:
                 Toast.makeText(getBaseContext(), "hi....Screen1", Toast.LENGTH_LONG).show();
@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return true;
     }
-
     @Override
     public void onClick(View view) {
         if (view == btndate) {
@@ -84,8 +83,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, dateListner, year, month, day);
             datePickerDialog.show();
         }
-
-        if (view == btnbutton2) {
+        if (view == btnbutton2)
+        {
             Calendar c1 = Calendar.getInstance();
             final int hour = c1.get(Calendar.HOUR);
             final int minute = c1.get(Calendar.MINUTE);
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     tvshowtime.setText(hourOfDay+":"+minute);
                 }
             };
-            TimePickerDialog timePickerDialog = new TimePickerDialog(this,timeListner,hour,minute);
+            TimePickerDialog timePickerDialog = new TimePickerDialog(this,onTimeSetListener,hour,minute,true);
             timePickerDialog.show();
         }
     }

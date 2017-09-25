@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.klaib.adham.menu.MainActivity"
-    android:id="@+id/tvshowdate">
+   >
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
-        android:id="@+id/textView2"
+        android:id="@+id/tvshowdate"
         android:layout_gravity="right|top"
         android:layout_below="@+id/btndate"
         android:layout_centerHorizontal="true"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="time"
         android:id="@+id/btnbutton2"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/tvshowdate"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp" />
 
